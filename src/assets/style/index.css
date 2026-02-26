@@ -2,3 +2,20 @@
     background-color: aqua;
     color: red;
 }
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    background-color: rgb(241, 180, 180);
+    padding: 10px 0 10px 0;
+}
+#nav-link{
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+}
+#nav-link Link{
+    color: gold;
+}
