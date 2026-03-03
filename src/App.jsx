@@ -7,6 +7,7 @@ import Error from "./assets/pages/Error"
 import Header from "./assets/pages/Header"
 import Footer from "./assets/pages/Footer"
 import Products from "./assets/pages/products/Products"
+import UseState from "./assets/pages/UseState"
 function App(){
   return(
     <>
@@ -21,6 +22,7 @@ function App(){
 <Route path="/" element={<Home/>}/>
 <Route path="/about" element={<About/>}/>
 <Route path="/contact" element={<Contact/>}/>
+<Route path="/useState" element={<UseState/>}/>
 <Route path="/Product/:navid" element={<Products/>}/>
 <Route path="*" element={<Error/>}/>
 </Routes>
