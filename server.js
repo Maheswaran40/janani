@@ -18,4 +18,4 @@ app.use("/",route)
 
 
 
-app.listen(process.env.PORT,()=>console.log("server is running"))
+app.listen(process.env.PORT,()=>console.log("server is running http://localhost:3000"))

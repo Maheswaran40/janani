@@ -34,7 +34,6 @@ const getData = async(req, res) => {
         let user = await userSchema.find()
         res.status(200).send(user)
         console.log("successfully get the data");
-
     }
     catch (err) {
         console.log("get function error", err.message);
@@ -46,15 +45,35 @@ const getData = async(req, res) => {
 }
 
 // update
-// const updateData = (req, res) => {
-
-// }
+const updateData =async (req, res) => {
+try{
+    let user= await userSchema.findByIdAndUpdate(req.params.id,req.body,{new:true})
+    res.status(200).send(user)
+}
+catch(err){
+     console.log("update function error", err.message);
+     res.status(404).send("update error")
+}
+finally{
+    
+       console.log("update function closed");
+}
+}
 
 
 // delete
-// const deleteData = (req, res) => {
+const deleteData =async (req, res) => {
+try{
+ let user= await userSchema.findByIdAndDelete(req.params.id)
+ res.status(200).send("data deleted successfully")
+}
+catch(err){
+console.log("delete function error",err.message);
+}
+finally{
+    console.log("delete function closed");
+}
+}
 
-// }
 
-
-module.exports={addData,getData}
+module.exports={addData,getData,updateData,deleteData}
